@@ -1,0 +1,163 @@
+@charset "UTF-8";
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('../font/PretendardVariable.woff2') format('woff2-variations');
+}
+* {
+    margin: 0 auto;
+    list-style: none;
+    font-family: Georgia, serif;
+    color: #400000;
+}
+a {
+	text-decoration: none;
+}
+header {
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+}
+.wrap {
+	width: 1100px;
+	height: 50px;
+	position: relative;
+}
+.logo {
+	width: 120px;
+	height: 50px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+}
+.logo a {
+	color: #400000;
+	font-size: 15px;
+	line-height: 50px;
+	font-style: italic;
+	font-size: 25px;
+}
+.menu {
+	width: 200px;
+	height: 50px;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+.menu div {
+	display: inline-block;
+	height: 50px;
+}
+.menu a {
+	color: #400000;
+	font-size: 15px;
+	margin: 0px 10px;
+	line-height: 50px;
+}
+.menu a:hover {
+	opacity: 0.7;
+}
+.bodywrap {
+	height: 890px;
+}
+.main-img {
+	width: 100%;
+	height: 380px;
+	position: relative;
+}
+.main-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.main-logo {
+	position: absolute;
+	bottom: 10px;
+	left: 360px;
+	display: inline-block;
+}
+.logo-text {
+	font-size: 67px;
+	font-style: italic;
+	color: #f1ebe5;
+	text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+	letter-spacing: -4px;
+}
+@keyframes open {
+	0% {
+		height: 30px;
+		width: 0;
+	}
+	100% {
+		height: 30px;
+		width: 150px;
+  	}
+}
+.aladin {
+	overflow: hidden;
+	white-space: nowrap;
+	animation: open 1.5s ease-in-out forwards;
+	display: inline-block;
+	font-size: 26px;
+	color: #000;
+	margin-left: 10px;
+	text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+.aladin:hover {
+	opacity: 0.7;
+}
+.shortcut {
+	width: 1150px;
+	margin-top: 25px;
+}
+.shortcut div {
+	margin: 15px 0px;
+}
+.shortcut a {
+	font-style: italic;
+	font-size: 25px;
+}
+.shortcut a:hover {
+	opacity: 0.7;
+}
+.shortcut i {
+	margin-right: 10px;
+	font-size: 20px;
+}
+.book-list i {
+	color: #958d82;
+}
+.write-review i {
+	color: #9d785b;
+}
+footer {
+	width: 1200px;
+}
+footer hr {
+	background: #400000;
+	height: 1px;
+	margin-bottom: 20px;
+}
+.footer {
+	height: 50px;
+	position: relative;
+	margin-bottom: 20px;
+}
+.copy {
+	color: #400000;
+	line-height: 50px;
+	display: inline-block;
+}
+.sns {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+.sns i {
+	color: #400000;
+	font-size: 20px;
+	line-height: 50px;
+	margin: 0px 6px;
+}

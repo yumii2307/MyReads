@@ -6,29 +6,12 @@
 <meta charset="UTF-8">
 <title>MyReads - Everything about reading</title>
     <link rel="stylesheet" href="resources/css/index.css" type="text/css">
-    <script src="resources/js/main.js" defer type="text/javascript"></script>
-    <script src="https://kit.fontawesome.com/fdb840a8cc.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-	<header>
-		<div class="wrap">
-			<div class="logo">
-				<a href="index.jsp">MyReads</a>
-			</div>
-			
-			<div class="menu">
-				<div class="login">
-					<a href="#">Login</a>
-				</div>
-				<div class="signup">
-					<a href="#">Sign Up</a>
-				</div>
-			</div>
-		</div>
-	</header>
+	<%@ include file="header.jsp" %>
 	
-	<div class="bodywrap">	
+	<div class="bodywrap">
 		<div class="main-img">
 			<img alt="메인 이미지" src="resources/img/book.jpg">
 			<div class="main-logo">
@@ -51,20 +34,7 @@
 		</div>
 	</div>
 	
-	<footer>
-		<hr>
-		<div class="footer">
-			<div class="copy">
-	             © 2024 MyReads Inc. All rights reserved
-	        </div>
-	        <div class="sns">
-	        	<i class="fa-brands fa-instagram"></i>
-	        	<i class="fa-brands fa-youtube"></i>
-	        	<i class="fa-brands fa-x-twitter"></i>
-	        	<i class="fa-brands fa-facebook"></i>
-	        </div>
-        </div>
-	</footer>
+	<%@ include file="footer.jsp" %>
 	
 </body>
 </html>

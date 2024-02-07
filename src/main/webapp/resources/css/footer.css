@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+footer {
+	width: 1200px;
+}
+footer hr {
+	background: #400000;
+	height: 1px;
+	margin-bottom: 20px;
+}
+.footer {
+	height: 50px;
+	position: relative;
+	margin-bottom: 20px;
+}
+.copy {
+	color: #400000;
+	line-height: 50px;
+	display: inline-block;
+}
+.sns {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+.sns i {
+	color: #400000;
+	font-size: 20px;
+	line-height: 50px;
+	margin: 0px 6px;
+}

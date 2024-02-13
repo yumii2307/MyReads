@@ -9,4 +9,8 @@ public class BookDao {
 
 	@Autowired
 	SqlSessionTemplate my;
+
+	public void insert(BookVO bookVO) {
+		my.insert("book.insert", bookVO);
+	}
 }

@@ -14,7 +14,6 @@ public class BookGetApi {
 	public ArrayList<BookVO> parse(String queryType, String key) {
 		String url = "http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=" + key + "&QueryType=" + queryType;
 	    String param = "&MaxResults=50&start=1&SearchTarget=Book&output=xml&Version=20131101";
-	    System.out.println(url + param);
 	    
 	    RestTemplate rt = new RestTemplate();
 	    rt.getMessageConverters().add(0, new StringHttpMessageConverter(StandardCharsets.UTF_8));

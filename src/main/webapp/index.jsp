@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>MyReads - Everything about reading</title>
-    <link rel="stylesheet" href="resources/css/index.css" type="text/css">
+<link rel="stylesheet" href="resources/css/index.css" type="text/css">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 		
 		<div class="shortcut">
 			<div class="book-list">
-				<a href="#"><i class="fa-solid fa-book"></i>Book List ›</a>
+				<a href="book/bookList"><i class="fa-solid fa-book"></i>Book List ›</a>
 			</div>
 			<div class="write-review">
 				<a href="#"><i class="fa-solid fa-pen-fancy"></i>Writing a Book review ›</a>

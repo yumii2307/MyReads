@@ -41,7 +41,7 @@ header {
 	font-size: 25px;
 }
 .menu {
-	width: 200px;
+	width: 135px;
 	height: 50px;
 	display: inline-block;
 	position: absolute;
@@ -59,4 +59,12 @@ header {
 }
 .menu a:hover {
 	opacity: 0.7;
+}
+
+.font {
+	font-family: 'Pretendard Variable';
+}
+
+.font a {
+	font-family: 'Pretendard Variable';
 }

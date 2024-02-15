@@ -23,5 +23,13 @@ public class BookDao {
 	public List<BookVO> bookList() {
 		return my.selectList("book.bookList");
 	}
+	
+	public List<BookVO> bookAllList(int type) {
+		return my.selectList("book.bookAllList", type);
+	}
+
+	public BookVO bookDetail(BookVO bookVO) {
+		return my.selectOne("book.bookDetail", bookVO);
+	}
 
 }

@@ -13,11 +13,25 @@ public class BookController {
 
 	@Autowired
 	BookService service;
-
+	
 	@RequestMapping("bookList")
-	public void bookList(BookVO bookVO, Model model) {
+	public void bookList(Model model) {
 		List<BookVO> list = service.bookList();
 
 		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("bookAllList")
+	public void bookAllList(int type, Model model) {
+		List<BookVO> list = service.bookAllList(type);
+		
+		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("bookDetail")
+	public void bookDetail(BookVO bookVO, Model model) {
+		BookVO vo = service.bookDetail(bookVO);
+		
+		model.addAttribute("vo", vo);
 	}
 }

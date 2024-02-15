@@ -6,8 +6,8 @@
 
 	<insert id="insert" parameterType="bookVO">
 		insert into book_list values
-		(#{author}, #{isbn}, #{link}, #{description}, #{title}, #{pubDate}, #{categoryName}, #{customerReviewRank},
-		#{cover}, #{itemId}, #{isbn13}, #{publisher}, #{priceSales}, #{adult}, #{categoryId}, #{priceStandard}, #{bestRank}, #{type})
+		(#{author}, #{isbn}, #{link}, #{description}, #{title}, #{pubDate}, #{categoryName}, #{customerReviewRank}, #{cover}, #{itemId}, 
+		#{isbn13}, #{publisher}, #{priceSales}, #{adult}, #{categoryId}, #{priceStandard}, #{bestRank}, #{type}, #{getApiDate})
 	</insert>
 	
 	<delete id="delete">
@@ -16,6 +16,16 @@
 	
 	<select id="bookList" resultType="bookVO">
 		select * from book_list
+	</select>
+	
+	<select id="bookAllList" parameterType="int" resultType="bookVO">
+		select * from book_list
+        where type = #{type}
+	</select>
+	
+	<select id="bookDetail" parameterType="bookVO" resultType="bookVO">
+		select * from book_list
+		where itemId = #{itemId}
 	</select>
 	
 </mapper>

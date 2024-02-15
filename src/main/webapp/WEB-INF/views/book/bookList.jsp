@@ -2,18 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %>
-
-<%
-    // 현재 날짜를 가져오기
-    Date currentDate = new Date();
-    
-    // 날짜를 원하는 형식으로 포맷팅하기
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-    String formattedDate = dateFormat.format(currentDate);
-%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +16,6 @@
 	
 	<img class="main-img" alt="메인 이미지" src="${pageContext.request.contextPath}/resources/img/book.jpg">
 	<div class="bodywrap">
-		<div class="current-date">data as of <%= formattedDate %> 00:00:00</div>
 		<c:forEach begin="0" end="2" var="type">
 			<div class="book-wrap">
 				<div class="book-list-form">
@@ -55,23 +42,23 @@
 											<c:if test="${vo.type == 0}">
 												<h1 class="rank">${vo.bestRank}</h1>
 											</c:if>
-											<a href="book/bookDetail?itemId=${vo.itemId}" target="_blank">
+											<a href="bookDetail?itemId=${vo.itemId}" target="_blank" rel="noopener">
 												<c:set var="newCover" value="${fn:replace(vo.cover, 'coversum', 'cover500')}"/>
 												<img src="${newCover}" alt="이미지">
 											</a>
 											<div class="book-info">
 												<div class="title font">
-													<a href="book/bookDetail?itemId=${vo.itemId}" target="_blank">
+													<a href="bookDetail?itemId=${vo.itemId}" target="_blank" rel="noopener">
 														${vo.title}
 													</a>
 												</div>
 												<span class="author font">
-													<a href="#" target="_blank">
+													<a href="#" target="_blank" rel="noopener">
 														${fn:split(vo.author, '(')[0]}
 													</a>
 												</span>
 												<span class="publisher font">
-													<a href="#" target="_blank">
+													<a href="#" target="_blank" rel="noopener">
 														| ${vo.publisher}
 													</a>
 												</span>
@@ -84,17 +71,7 @@
 						</ul>
 					</div>
 					<div class="more">
-						<c:choose>
-							<c:when test="${type == 0}">
-								<a href="book/bookAllList?type=0">more ›</a>
-							</c:when>
-							<c:when test="${type == 1}">
-								<a href="book/bookAllList?type=1">more ›</a>
-							</c:when>
-							<c:otherwise>
-								<a href="book/bookAllList?type=2">more ›</a>
-							</c:otherwise>
-						</c:choose>
+						<a href="bookAllList?type=${type}">more ›</a>
 					</div>
 				</div>
 				<button class="prev-btn" disabled><i class="fa-solid fa-chevron-left"></i></button>
@@ -102,6 +79,7 @@
 			</div>
 		</c:forEach>
 	</div>
+	<div class="current-date">Data as of<c:out value=" ${list[0].getApiDate}" /></div>
 	
 	<%@ include file="../../../footer.jsp" %>
 

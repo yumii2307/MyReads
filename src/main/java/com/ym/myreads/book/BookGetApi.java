@@ -13,19 +13,19 @@ public class BookGetApi {
 
 	public ArrayList<BookVO> parse(String queryType, String key) {
 		String url = "http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=" + key + "&QueryType=" + queryType;
-	    String param = "&MaxResults=50&start=1&SearchTarget=Book&output=xml&Version=20131101";
+	    String param = "&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101";
 	    
 	    RestTemplate rt = new RestTemplate();
 	    rt.getMessageConverters().add(0, new StringHttpMessageConverter(StandardCharsets.UTF_8));
 
 	    String rsp = rt.getForObject(url + param, String.class);
-	    JSONObject json = XML.toJSONObject(rsp);
-	    JSONObject object = json.getJSONObject("object");
-	    JSONArray item = object.getJSONArray("item");
+	    JSONObject json = new JSONObject(rsp);
+	    JSONArray item = json.getJSONArray("item");
 	    
 	    ArrayList<BookVO> list = new ArrayList<BookVO>();
 	    for (int i = 0; i < item.length(); i++) {
 	    	BookVO vo = new BookVO();
+	    	vo.setGetApiDate(json.getString("pubDate"));
 	    	vo.setAuthor(item.getJSONObject(i).getString("author"));
 	    	vo.setIsbn(item.getJSONObject(i).optString("isbn"));
 	    	vo.setLink(item.getJSONObject(i).getString("link"));
@@ -50,10 +50,9 @@ public class BookGetApi {
 	    	} else {
 	    		vo.setType(2);
 	    	}
-	    	
 	    	list.add(vo);
+	    	
 	    }
-	    
 	    return list;
 	}
 

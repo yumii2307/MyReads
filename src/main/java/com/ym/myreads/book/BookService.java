@@ -24,14 +24,21 @@ public class BookService {
 
 		for (String queryType : queryTypes) {
 			ArrayList<BookVO> list = api.parse(queryType, key);
-			for (int i = 0; i < list.size(); i++) {
-				dao.insert(list.get(i));
+	        for (BookVO book : list) {
+	            dao.insert(book);
 			}
 		}
-
 	}
 
 	public List<BookVO> bookList() {
 		return dao.bookList();
+	}
+	
+	public List<BookVO> bookAllList(int type) {
+		return dao.bookAllList(type);
+	}
+
+	public BookVO bookDetail(BookVO bookVO) {
+		return dao.bookDetail(bookVO);
 	}
 }

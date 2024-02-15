@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     $('.next-btn, .prev-btn').click(function() {
         const bookList = $(this).siblings('.book-list-form');
-        const orgIndex = $(this).parent().index()-1;
+        const orgIndex = $(this).parent().index();
 
         orgCounts[orgIndex] += $(this).hasClass('next-btn') ? 1 : -1;
 

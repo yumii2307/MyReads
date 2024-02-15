@@ -14,10 +14,11 @@ public class BookInsertScheduler {
 
 	@Autowired
 	BookConfiguration ttbkey;
-
+	
     @Scheduled(cron = "0 0 0 * * ?")
     public void insert() {
         String key = ttbkey.key();
         service.insert(key);
+        System.out.println("Success Get Api.");
     }
 }

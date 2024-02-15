@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class BookVO {
 	
+	private String getApiDate;
 	private int itemId;
 	private String title;
 	private String link;

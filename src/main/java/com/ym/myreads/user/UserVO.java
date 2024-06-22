@@ -1,4 +1,4 @@
-package com.ym.myreads.book;
+package com.ym.myreads.user;
 
 import lombok.Getter;
 import lombok.Setter;

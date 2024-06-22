@@ -12,12 +12,10 @@
 			</div>
 			
 			<div class="menu">
-				<div class="login">
-					<a href="#">Login</a>
-				</div>
-				<div class="signup">
-					<a href="#">Sign Up</a>
-				</div>
+				<ul>
+					<li><a href="${pageContext.request.contextPath}/user/login.jsp">Login</a></li>
+					<li><a href="${pageContext.request.contextPath}/user/signup.jsp">Sign Up</a></li>
+				</ul>
 			</div>
 		</div>
 	</header>

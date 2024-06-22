@@ -47,7 +47,10 @@ header {
 	position: absolute;
 	right: 0;
 }
-.menu div {
+.menu ul {
+	padding: 0;
+}
+.menu ul li {
 	display: inline-block;
 	height: 50px;
 }

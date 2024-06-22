@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('../font/PretendardVariable.woff2') format('woff2-variations');
+}
+* {
+    margin: 0 auto;
+    list-style: none;
+    font-family: Georgia, serif;
+    color: #400000;
+}
+a {
+	text-decoration: none;
+}
+.bodywrap {
+	margin: 250px 0px 260px;
+}
+.login-form {
+	width: 332px;
+	height: 350px;
+}
+.login-form h1 {
+	font-weight: 500;
+	text-align: left;
+	color: #400000;
+}
+.login-form hr {
+	margin: 15px 0px 20px;
+	color: #757575;
+}
+.input-form div {
+	border: 1px solid #757575;
+	width: 300px;
+	padding: 0px 15px;
+	border-radius: 15px;
+	margin: 15px 0px;
+}
+.input-form div input {
+	width: 240px;
+	height: 40px;
+	background-color: #fff;
+	padding: 0px 15px;
+	font-size: 15px;
+	border: none;
+}
+.input-form div i {
+	font-size: 18px;
+	color: #757575;
+}
+.input-form div:focus-within {
+	border-color: #400000;
+}
+.input-form div:focus-within i {
+    color: #400000;
+}
+.input-form div input:focus {
+	outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 9999s ease-out;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+.login {
+	width: 332px !important;
+	height: 40px;
+	border: 1px solid #757575;
+	background-color: #fff;
+	border-radius: 15px;
+	font-size: 16px;
+	color: #400000;
+}
+.login:hover {
+	border-color: #400000;
+}
+.sub-btn {
+	width: 332px;
+	height: 35px;
+	margin: 10px 0px;
+	text-align: center;
+	line-height: 30px;
+}
+.sub-btn ul {
+	height: 30px;
+	padding: 0px 23px;
+}
+.sub-btn ul li {
+	float: left;
+	margin: 0px 5px;
+	color: #757575;
+}
+.sub-btn ul li a {
+	height: 35px;
+    background-color: #fff;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #757575;
+}
+.sub-btn ul li a:hover {
+	color: #400000;
+}

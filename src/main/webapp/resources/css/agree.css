@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('../font/PretendardVariable.woff2') format('woff2-variations');
+}
+* {
+    margin: 0 auto;
+    list-style: none;
+    font-family: Georgia, serif;
+    color: #400000;
+}
+a {
+	text-decoration: none;
+}
+.bodywrap {
+	margin: 160px 0px 350px;
+}
+.agree-form {
+	width: 332px;
+	height: 350px;
+}
+.agree-form h1 {
+	font-weight: 500;
+	text-align: left;
+	color: #400000;
+}
+.agree-form hr {
+	margin: 15px 0px 20px;
+	color: #757575;
+}
+.agree-detail form div p {
+	margin: 10px 25px;
+	border: 1px solid #757575;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 13px;
+	color: #757575;
+	overflow-y: scroll;
+    overflow-x: hidden;
+    width: 282px;
+    height: 60px;
+}
+.agree-detail div {
+	margin-bottom: 10px;
+}
+input {
+	display: none;
+}
+input + label {
+	cursor: pointer;
+}
+input + label > span {
+	vertical-align: middle;
+	padding-left: 5px;
+}
+input + label:before {
+	content:"";
+	display:inline-block;
+	width:17px;
+	height:17px;
+	border:2px solid #400000;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+input:checked + label:before {
+	content:"";
+	background-color:#400000;
+	border-color:#400000;
+	box-shadow: inset 0 0 0 4px white;
+}
+.next {
+	text-align: right;
+	margin-top: 30px;
+}
+.next button {
+	background: none;
+	border: none;
+	font-size: 20px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 30px 50px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+.popup p {
+	margin-top: 40px;
+}
+#close {
+	background: none;
+	border: 1px solid #757575;
+	margin-top: 30px;
+	padding: 5px;
+}

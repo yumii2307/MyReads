@@ -33,7 +33,7 @@
                     <li>|</li>
                     <li><a href="find_password_num.jsp" class="find-pw">비밀번호 찾기</a></li>
                     <li>|</li>
-                    <li><a href="agree.jsp" class="signup">Sign up</a></li>
+                    <li><a href="termsAgreement.jsp" class="signup">Sign up</a></li>
                 </ul>
    			</div>
     	</div>

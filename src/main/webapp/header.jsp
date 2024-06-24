@@ -14,7 +14,7 @@
 			<div class="menu">
 				<ul>
 					<li><a href="${pageContext.request.contextPath}/user/login.jsp">Login</a></li>
-					<li><a href="${pageContext.request.contextPath}/user/signup.jsp">Sign Up</a></li>
+					<li><a href="${pageContext.request.contextPath}/user/termsAgreement.jsp">Sign Up</a></li>
 				</ul>
 			</div>
 		</div>

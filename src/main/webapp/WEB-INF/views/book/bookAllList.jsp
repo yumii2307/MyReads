@@ -17,19 +17,22 @@
 	<div class="bodywrap">
 			<div class="book-wrap">
 				<div class="book-list-form">
-					<h1 class="list">
-						<c:choose>
-							<c:when test="${type == 0}">
-								<i class="fa-solid fa-crown"></i> Best Seller
-							</c:when>
-							<c:when test="${type == 1}">
-								<i class="fa-solid fa-book"></i> New Book
-							</c:when>
-							<c:otherwise>
-								<i class="fa-solid fa-book-bookmark"></i> Notable New Book
-							</c:otherwise>
-						</c:choose>
-					</h1>
+					<c:if test="${not empty list}">
+    				<c:set var="vo" value="${list[0]}" />
+						<h1 class="list">
+							<c:choose>
+								<c:when test="${vo.type == 0}">
+									<i class="fa-solid fa-crown"></i> Best Seller
+								</c:when>
+								<c:when test="${vo.type == 1}">
+									<i class="fa-solid fa-book"></i> New Book
+								</c:when>
+								<c:otherwise>
+									<i class="fa-solid fa-book-bookmark"></i> Notable New Book
+								</c:otherwise>
+							</c:choose>
+						</h1>
+					</c:if>
 					<div class="book-list">
 						<ul>
 							<c:forEach items="${list}" var="vo">

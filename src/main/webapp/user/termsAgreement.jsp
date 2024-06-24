@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>MyReads - Everything about reading</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/agree.css" type="text/css">
-<script src="${pageContext.request.contextPath}/resources/js/agree.js" defer type="text/javascript"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/termsAgreement.css" type="text/css">
+<script src="${pageContext.request.contextPath}/resources/js/termsAgreement.js" defer type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/resources/js/jquery-3.7.1.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
 			<h1><a href="../index.jsp">MyReads</a></h1>
 			<hr>
 			<div class="agree-detail">
-			    <form action="process_registration.php" method="post" id="check-form">
+			    <form action="termsAgreement" method="post" id="check-form">
 			    	<div>
 			            <input type="checkbox" id="all" name="all">
 			            <label for="all"><span>전체 약관 동의</span></label>

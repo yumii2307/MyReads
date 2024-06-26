@@ -7,11 +7,10 @@ import lombok.Setter;
 @Setter
 public class UserVO {
 
-	private int no;
 	private String email;
 	private String password;
 	private String name;
 	private String nickname;
-	private String created_at;
+	private String tel;
 	
 }

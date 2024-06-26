@@ -19,40 +19,40 @@
 			<h1><a href="../index.jsp">MyReads</a></h1>
 			<hr>
 			<div class="input-form" >
-				<form action="signUp" method="post">
+				<form action="userSignUp" method="post" id="signup-form">
 					<div>
 						<i class="fa-regular fa-user"></i>
-						<input type="email" id="user_id" name="user_id" placeholder="Email" required>
+						<input type="email" id="email" name="email" placeholder="Email" required>
 						<button type="button" id="emailConfirm">중복확인</button>
 					</div>
-					<div id="password_box">
+					<div id="passwordBox">
 						<i class="fa-solid fa-unlock-keyhole"></i>
-						<input type="password" id="user_password" name="user_password" placeholder="Password" required>
+						<input type="password" id="password" name="password" placeholder="Password" required>
 						<button type="button" id="showPassword" class="showPassword"><i class="fa-solid fa-eye-slash"></i></button>
 						<output id="passwordMessage" class="condition"></output>
 					</div>
-					<div id="password_box2">
+					<div id="passwordBox2">
 						<i class="fa-solid fa-unlock-keyhole"></i>
-						<input type="password" id="user_password2" name="user_password2" placeholder="Confirm Password" required>
+						<input type="password" id="password2" name="password2" placeholder="Confirm Password" required>
 						<button type="button" id="showPassword2" class="showPassword"><i class="fa-solid fa-eye-slash"></i></button>
 						<output id="passwordMessage2" class="condition"></output>
 					</div>
 					<div>
 						<i class="fa-regular fa-user"></i>
-						<input type="text" id="user_name" name="user_name" placeholder="Name" required>
+						<input type="text" id="name" name="name" placeholder="Name" required>
 					</div>
 					<div>
 						<i class="fa-solid fa-tag"></i>
-						<input type="text" id="nick_name" name="nick_name" placeholder="Nickname" required>
+						<input type="text" id="nickname" name="nickname" placeholder="Nickname" required>
 						<button type="button" id="nicknameConfirm">중복확인</button>
 					</div>
 					<div>
 						<i class="fa-solid fa-mobile-screen"></i>
-						<input type="text" id="user_tel" name="user_tel" placeholder="Tel" required>
+						<input type="text" id="tel" name="tel" placeholder="Tel">
 						<button type="button" id="telConfirm">번호인증</button>
 					</div>
 					<a href="termsAgreement.jsp" class="behind">‹ Back</a>
-					<input type="submit" class="signup" value="Sign Up ›">
+					<button type="submit" class="signup">Sign Up ›</button>
 				</form>
 			</div>
 		</div>

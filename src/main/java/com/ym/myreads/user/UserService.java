@@ -16,7 +16,17 @@ public class UserService {
 	@Autowired
 	SqlSessionTemplate my;
 
-	public List<UserVO> userSignUp() {
-		return dao.userSignUp();
+	public void userSignUp(UserVO userVO) {
+		dao.userSignUp(userVO);
+	}
+
+	public int emailDuplicate(String email) {
+		int result = dao.emailDuplicate(email);
+		return result;
+	}
+
+	public int nicknameConfirm(String nickname) {
+		int result = dao.nicknameConfirm(nickname);
+		return result;
 	}
 }

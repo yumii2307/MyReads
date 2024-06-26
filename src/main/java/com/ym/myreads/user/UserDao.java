@@ -12,8 +12,18 @@ public class UserDao {
 	@Autowired
 	SqlSessionTemplate my;
 
-	public List<UserVO> userSignUp() {
-		return my.selectList("user.userSignUp");
+	public void userSignUp(UserVO userVO) {
+		my.insert("user.userSignUp", userVO);
+	}
+
+	public int emailDuplicate(String email) {
+		int result = my.selectOne("user.emailDuplicate", email);
+		return result;
+	}
+
+	public int nicknameConfirm(String nickname) {
+		int result = my.selectOne("user.nicknameConfirm", nickname);
+		return result;
 	}
 
 }

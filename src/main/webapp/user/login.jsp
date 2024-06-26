@@ -18,13 +18,13 @@
     			<form action="login" method="post">
     				<div>
     					<i class="fa-regular fa-user"></i>
-						<input type="email" id="user_id" name="user_id" placeholder="Email" required>
+						<input type="email" id="email" name="email" placeholder="Email" required>
 					</div>
 					<div>
 						<i class="fa-solid fa-unlock-keyhole"></i>
-						<input type="password" id="user_password" name="user_password" placeholder="Password" required>
+						<input type="password" id="password" name="password" placeholder="Password" required>
 					</div>
-		    		<input type="submit" class="login" value="Login">
+		    		<button type="submit" class="login">Login</button>
     			</form>
     		</div>
    			<div class="sub-btn">
@@ -33,7 +33,7 @@
                     <li>|</li>
                     <li><a href="find_password_num.jsp" class="find-pw">비밀번호 찾기</a></li>
                     <li>|</li>
-                    <li><a href="termsAgreement.jsp" class="signup">Sign up</a></li>
+                    <li><a href="termsAgreement.jsp" class="signup">Sign Up</a></li>
                 </ul>
    			</div>
     	</div>

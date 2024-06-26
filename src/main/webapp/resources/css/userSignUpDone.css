@@ -1,0 +1,55 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('../font/PretendardVariable.woff2') format('woff2-variations');
+}
+* {
+    margin: 0 auto;
+    list-style: none;
+    font-family: Georgia, serif;
+    color: #400000;
+}
+a {
+	text-decoration: none;
+}
+.bodywrap {
+	margin: 260px 0px 360px;
+}
+.signup-done-form {
+    width: 322px;
+    height: 230px;
+    text-align: center;
+}
+.signup-done-form h1 {
+	font-weight: 500;
+	text-align: left;
+	color: #400000;
+}
+.signup-done-form hr {
+    margin: 15px 0px 20px;
+    color: #757575;
+}
+.comment-form a {
+    width: 85px;
+    height: 40px;
+    background-color: #fff;
+    font-size: 20px;
+    color: #400000;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    line-height: 40px;
+    margin-top: 10px;
+    border: none;
+    padding: 0;
+}
+.comment-form i {
+	font-size: 22px;
+	margin: 10px 0px;
+}
+.comment-form p {
+	margin: 10px 0px;
+}

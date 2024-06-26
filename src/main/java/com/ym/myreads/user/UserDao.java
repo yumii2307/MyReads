@@ -1,7 +1,5 @@
 package com.ym.myreads.user;
 
-import java.util.List;
-
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -24,6 +22,11 @@ public class UserDao {
 	public int nicknameConfirm(String nickname) {
 		int result = my.selectOne("user.nicknameConfirm", nickname);
 		return result;
+	}
+
+	public UserVO login(String email) {
+		UserVO userVO = my.selectOne("user.login", email);
+		return userVO;
 	}
 
 }

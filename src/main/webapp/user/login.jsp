@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>MyReads - Everything about reading</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login.css" type="text/css">
+<script src="${pageContext.request.contextPath}/resources/js/login.js" defer type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.7.1.js"></script>
 <script src="https://kit.fontawesome.com/fdb840a8cc.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,7 +17,7 @@
     		<h1><a href="../index.jsp">MyReads</a></h1>
 		    <hr>
     		<div class="input-form">
-    			<form action="login" method="post">
+    			<form action="login" method="post" id="login-form">
     				<div>
     					<i class="fa-regular fa-user"></i>
 						<input type="email" id="email" name="email" placeholder="Email" required>

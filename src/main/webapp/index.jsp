@@ -1,11 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	HttpSession loginSession = request.getSession();
+	String email = (String) loginSession.getAttribute("email");
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>MyReads - Everything about reading</title>
 <link rel="stylesheet" href="resources/css/index.css" type="text/css">
+<script src="resources/js/index.js" defer type="text/javascript"></script>
 </head>
 <body>
 
@@ -25,7 +30,7 @@
 				<a href="book/bookList"><i class="fa-solid fa-book"></i>Book List ›</a>
 			</div>
 			<div class="write-review">
-				<a href="#"><i class="fa-solid fa-pen-fancy"></i>Writing a Book review ›</a>
+				<a href="book/writeReview.jsp" id="writeReview" onclick="writeReview('<%=email%>')"><i class="fa-solid fa-pen-fancy"></i>Writing a Book review ›</a>
 			</div>
 			<br>
 			<div class="find-loc">

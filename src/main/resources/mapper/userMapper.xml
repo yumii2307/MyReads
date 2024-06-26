@@ -17,4 +17,8 @@
 		select count(*) from user where nickname = #{nickname}
 	</select>
 	
+	<select id="login" parameterType="string" resultType="userVO">
+		select password, nickname from user where email = #{email}
+	</select>
+	
 </mapper>

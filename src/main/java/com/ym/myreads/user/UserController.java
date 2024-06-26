@@ -1,8 +1,15 @@
 package com.ym.myreads.user;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +22,9 @@ public class UserController {
 	@Autowired
 	UserService service;
 	
+	@Autowired
+	BCryptPasswordEncoder passwordEncoder;
+	
 	@RequestMapping("termsAgreement")
 	public String termsAgreement() {
 		return "user/userSignUp";
@@ -22,8 +32,8 @@ public class UserController {
 	
 	@RequestMapping("userSignUp")
 	public String userSignUp(UserVO userVO) {
+		userVO.setPassword(passwordEncoder.encode(userVO.getPassword()));
 		service.userSignUp(userVO);
-		
 		return "user/userSignUpDone";
 	}
 	
@@ -41,4 +51,15 @@ public class UserController {
 		return String.valueOf(result);
 	}
 	
+	@RequestMapping("login")
+	@ResponseBody
+	public UserVO login(HttpSession session, String email, String password, Model model) {
+	    UserVO userVO = service.login(email);
+	    if (userVO != null && userVO.getPassword() != null && passwordEncoder.matches(password, userVO.getPassword())) {
+	        session.setAttribute("email", email);
+	        return userVO;
+	    } else {
+	    	return null;
+	    }
+	}
 }

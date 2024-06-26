@@ -1,8 +1,5 @@
 package com.ym.myreads.user;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,5 +25,10 @@ public class UserService {
 	public int nicknameConfirm(String nickname) {
 		int result = dao.nicknameConfirm(nickname);
 		return result;
+	}
+
+	public UserVO login(String email) {
+		UserVO userVO = dao.login(email);
+		return userVO;
 	}
 }

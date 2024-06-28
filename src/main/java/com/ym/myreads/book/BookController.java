@@ -1,5 +1,6 @@
 package com.ym.myreads.book;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,4 +35,25 @@ public class BookController {
 		
 		model.addAttribute("vo", vo);
 	}
+	
+	@RequestMapping("writeReview")
+	public String writeReview() {
+		return "book/writeReview";
+	}
+	
+	@RequestMapping("bookSearchContent")
+	public ArrayList<BookVO> bookSearchContent(String queryType, String query, String key, Model model) {
+		ArrayList<BookVO> list = service.bookSearch(queryType, query, key);
+		
+		model.addAttribute("list", list);
+		return list;
+	}
+	@RequestMapping("bookSearch")
+	public ArrayList<BookVO> bookSearch(String queryType, String query, String key, Model model) {
+		ArrayList<BookVO> list = service.bookSearch(queryType, query, key);
+		
+		model.addAttribute("list", list);
+		return list;
+	}
+	
 }

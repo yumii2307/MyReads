@@ -15,6 +15,9 @@ public class BookService {
 
 	@Autowired
 	SqlSessionTemplate my;
+	
+	@Autowired
+	BookConfiguration ttbkey;
 
 	public void insert(String key) {
 		BookGetApi api = new BookGetApi();
@@ -41,4 +44,12 @@ public class BookService {
 	public BookVO bookDetail(BookVO bookVO) {
 		return dao.bookDetail(bookVO);
 	}
+
+	public ArrayList<BookVO> bookSearch(String queryType, String query, String key) {
+		BookSearchList search = new BookSearchList();
+		key = ttbkey.key();
+		ArrayList<BookVO> list = search.parse(queryType, query, key);
+		return list;
+	}
+
 }

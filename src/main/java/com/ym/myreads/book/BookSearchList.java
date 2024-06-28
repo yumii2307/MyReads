@@ -8,11 +8,11 @@ import org.json.JSONObject;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-public class BookGetApi {
+public class BookSearchList {
 
-	public ArrayList<BookVO> parse(String queryType, String key) {
-		String url = "http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=" + key + "&QueryType=" + queryType;
-	    String param = "&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101";
+	public ArrayList<BookVO> parse(String queryType, String query, String key) {
+		String url = "https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=" + key + "&Query=" + query + "&QueryTyp=" + queryType; //author, publisher
+	    String param = "&MaxResults=20&start=1&SearchTarget=Book&output=js&Version=20131101";
 	    
 	    RestTemplate rt = new RestTemplate();
 	    rt.getMessageConverters().add(0, new StringHttpMessageConverter(StandardCharsets.UTF_8));
@@ -24,7 +24,6 @@ public class BookGetApi {
 	    ArrayList<BookVO> list = new ArrayList<BookVO>();
 	    for (int i = 0; i < item.length(); i++) {
 	    	BookVO vo = new BookVO();
-	    	vo.setGetApiDate(json.getString("pubDate"));
 	    	vo.setAuthor(item.getJSONObject(i).getString("author"));
 	    	vo.setIsbn(item.getJSONObject(i).optString("isbn"));
 	    	vo.setLink(item.getJSONObject(i).getString("link"));
@@ -41,18 +40,11 @@ public class BookGetApi {
 	    	vo.setAdult(item.getJSONObject(i).getBoolean("adult"));
 	    	vo.setCategoryId(item.getJSONObject(i).getInt("categoryId"));
 	    	vo.setPriceStandard(item.getJSONObject(i).getInt("priceStandard"));
-	    	if (queryType == "Bestseller") {
-	    		vo.setBestRank(item.getJSONObject(i).getInt("bestRank"));
-	    		vo.setType(0);
-	    	} else if (queryType == "ItemNewAll") {
-	    		vo.setType(1);
-	    	} else {
-	    		vo.setType(2);
-	    	}
-	    	list.add(vo);
 	    	
+	    	list.add(vo);
 	    }
+	    
 	    return list;
 	}
-
+	
 }

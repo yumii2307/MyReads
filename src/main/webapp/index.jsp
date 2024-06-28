@@ -29,12 +29,17 @@
 			<div class="book-list">
 				<a href="book/bookList"><i class="fa-solid fa-book"></i>Book List ›</a>
 			</div>
+			<div class="book-search">
+				<a href="book/bookSearch"><i class="fa-solid fa-magnifying-glass"></i>To search for a book ›</a>
+			</div>
 			<div class="write-review">
-				<a href="book/writeReview.jsp" id="writeReview" onclick="writeReview('<%=email%>')"><i class="fa-solid fa-pen-fancy"></i>Writing a Book review ›</a>
+				<a href="book/writeReview" id="writeReview" onclick="writeReview('<%=email%>', event)">
+					<i class="fa-solid fa-pen-fancy"></i>Writing a Book review ›
+				</a>
 			</div>
 			<br>
 			<div class="find-loc">
-				<a href="#"><i class="fa-solid fa-signs-post"></i>Find Libraries & Bookstores ›</a>
+				<a href="book/writeReview.jsp"><i class="fa-solid fa-signs-post"></i>Find Libraries & Bookstores ›</a>
 			</div>
 		</div>
 	</div>

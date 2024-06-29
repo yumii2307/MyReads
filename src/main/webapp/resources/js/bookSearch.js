@@ -1,10 +1,10 @@
-function search(page) {
+function search() {
 	var queryType = $("#queryType").val();
 	var query = $("#query").val();
 	
     $.ajax({
         type: "POST",
-        url: "bookSearchContent",
+        url: "bookSearch",
         data: {
             queryType: queryType,
             query: query

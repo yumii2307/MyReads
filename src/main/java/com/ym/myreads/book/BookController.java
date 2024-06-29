@@ -37,17 +37,18 @@ public class BookController {
 	}
 	
 	@RequestMapping("writeReview")
-	public String writeReview() {
-		return "book/writeReview";
-	}
-	
-	@RequestMapping("bookSearchContent")
-	public ArrayList<BookVO> bookSearchContent(String queryType, String query, String key, Model model) {
+	public ArrayList<BookVO> writeReview(String queryType, String query, String key, Model model) {
 		ArrayList<BookVO> list = service.bookSearch(queryType, query, key);
 		
 		model.addAttribute("list", list);
 		return list;
 	}
+	
+	@RequestMapping("writeReviewDone")
+	public void writeReviewDone(BookReviewVO bookReviewVO) {
+		service.writeReviewDone(bookReviewVO);
+	}
+	
 	@RequestMapping("bookSearch")
 	public ArrayList<BookVO> bookSearch(String queryType, String query, String key, Model model) {
 		ArrayList<BookVO> list = service.bookSearch(queryType, query, key);

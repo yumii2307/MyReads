@@ -12,6 +12,5 @@ public class BookReviewVO {
 	private int itemId;
 	private String quotation;
 	private String review;
-	private int point;
 	
 }

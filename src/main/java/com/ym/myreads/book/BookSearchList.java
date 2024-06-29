@@ -12,7 +12,7 @@ public class BookSearchList {
 
 	public ArrayList<BookVO> parse(String queryType, String query, String key) {
 		String url = "https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=" + key + "&Query=" + query + "&QueryTyp=" + queryType; //author, publisher
-	    String param = "&MaxResults=20&start=1&SearchTarget=Book&output=js&Version=20131101";
+	    String param = "&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101";
 	    
 	    RestTemplate rt = new RestTemplate();
 	    rt.getMessageConverters().add(0, new StringHttpMessageConverter(StandardCharsets.UTF_8));

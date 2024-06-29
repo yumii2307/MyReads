@@ -28,4 +28,9 @@
 		where itemId = #{itemId}
 	</select>
 	
+	<insert id="reviewInsert" parameterType="bookReviewVO">
+		insert into book_review (email, itemId, quotation, review)
+		values (#{email}, #{itemId}, #{quotation}, #{review})
+	</insert>
+	
 </mapper>

@@ -52,4 +52,8 @@ public class BookService {
 		return list;
 	}
 
+	public void writeReviewDone(BookReviewVO bookReviewVO) {
+		dao.writeReviewDone(bookReviewVO);
+	}
+
 }

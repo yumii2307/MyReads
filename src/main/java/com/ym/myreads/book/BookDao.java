@@ -32,4 +32,8 @@ public class BookDao {
 		return my.selectOne("book.bookDetail", bookVO);
 	}
 
+	public void writeReviewDone(BookReviewVO bookReviewVO) {
+		my.insert("book.reviewInsert", bookReviewVO);
+	}
+
 }
